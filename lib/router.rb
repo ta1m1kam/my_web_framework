@@ -22,6 +22,8 @@ class Router
 
   def ctrl(string)
     ctrl_name, action_name = string.split('#')
+    puts ctrl_name
+    puts action_name
     klass = Object.const_get "#{ctrl_name.capitalize}Controller"
     klass.new(name: ctrl_name, action: action_name.to_sym)
   end
