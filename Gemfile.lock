@@ -5,9 +5,11 @@ GEM
     puma (4.2.1)
       nio4r (~> 2.0)
     rack (2.0.7)
+    sequel (5.25.0)
     slim (4.0.1)
       temple (>= 0.7.6, < 0.9)
       tilt (>= 2.0.6, < 2.1)
+    sqlite3 (1.4.1)
     temple (0.8.2)
     tilt (2.0.10)
 
@@ -17,7 +19,9 @@ PLATFORMS
 DEPENDENCIES
   puma
   rack
+  sequel
   slim
+  sqlite3
 
 BUNDLED WITH
    1.17.2
