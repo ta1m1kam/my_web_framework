@@ -8,11 +8,15 @@ class Controller
   end
 
   def call
-    send(action) # 2
-    self.status = 200 # 3
+    send(action)
+    self.status = 200
     self.headers = {"Content-Type" => "text/html"}
-    self.content = ["Hello world"]
+    self.content = [template.render(self)]
     self
+  end
+
+  def template
+    Slim::Template.new(File.join(App.root, 'app', 'views', "#{self.name}", "#{self.action}.slim"))
   end
 
   def not_found # 4

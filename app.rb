@@ -1,4 +1,5 @@
 require 'yaml'
+require 'slim'
 Dir[File.join(File.dirname(__FILE__), 'lib', '*.rb')].each{ |file| require file }
 Dir[File.join(File.dirname(__FILE__), 'app', '**','*.rb')].each{ |file| require file }
 ROUTES = YAML.load(File.read(File.join(File.dirname(__FILE__), 'app', 'routes.yml')))
@@ -16,5 +17,9 @@ class App
     result = router.resolve(env)
     # [200, {}, ['Hello world']]
     [result.status, result.headers, result.content]
+  end
+
+  def self.root
+    File.dirname(__FILE__)
   end
 end
