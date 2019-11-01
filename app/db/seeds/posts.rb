@@ -1,9 +1,9 @@
 Post.create(
-    title: 'What is Lorem Ipsum?',
-    content: 'Lorem Ipsum is a dummy text...'
+    title: 'Post title1',
+    content: 'dummy text...'
 )
 
 Post.create(
-    title: 'What is Lorem Ipsum?',
-    content: 'Lorem Ipsum is a dummy text...'
+    title: 'Post title2',
+    content: 'dummy text...'
 )

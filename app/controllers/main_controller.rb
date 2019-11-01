@@ -1,6 +1,6 @@
 class MainController < Controller
   def index
-    @test = 'Some dump text here'
+    @title = 'MainController#index'
     @arr = %w(one two three)
   end
 
